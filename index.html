@@ -303,7 +303,7 @@ document.addEventListener('DOMContentLoaded', () => {
     <h2>${C.info.title}<span class="tr">${C.info.title_tr}</span></h2>
     <div class="section-divider"></div>
     <ul class="info-list">${C.info.items.map(it=>`
-      <li><span class="info-label">${it.label}</span><span class="info-val">${it.html}</span></li>`).join('')}
+      <li><span class="info-label">${it.label.replace(/ · /g,'<br>')}</span><span class="info-val">${it.html}</span></li>`).join('')}
     </ul>`;
 
   /* Contact */
