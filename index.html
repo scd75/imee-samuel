@@ -293,7 +293,6 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Programme */
   const prog = document.getElementById('programme-container');
   prog.innerHTML = `
-    <p class="section-tag">${C.programme.tag}</p>
     <h2>${C.programme.title}<span class="tr">${C.programme.title_tr}</span></h2>
     <div class="section-divider"></div>
     ${C.programme.days.map(renderDay).join('')}`;
@@ -301,7 +300,6 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Info */
   const info = document.getElementById('info-container');
   info.innerHTML = `
-    <p class="section-tag">${C.info.tag}</p>
     <h2>${C.info.title}<span class="tr">${C.info.title_tr}</span></h2>
     <div class="section-divider"></div>
     <ul class="info-list">${C.info.items.map(it=>`
@@ -311,7 +309,6 @@ document.addEventListener('DOMContentLoaded', () => {
   /* Contact */
   const contact = document.getElementById('contact-container');
   contact.innerHTML = `
-    <p class="section-tag">${C.contact.tag}</p>
     <h2>${C.contact.title}<span class="tr">${C.contact.title_tr}</span></h2>
     <div class="section-divider"></div>
     ${C.contact.people.map(p=>`
