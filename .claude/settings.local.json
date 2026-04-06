@@ -6,7 +6,8 @@
       "WebFetch(domain:google.com)",
       "Bash(curl:*)",
       "WebFetch(domain:www.zuerich.com)",
-      "WebFetch(domain:www.stadt-zuerich.ch)"
+      "WebFetch(domain:www.stadt-zuerich.ch)",
+      "Bash(gh repo:*)"
     ]
   }
 }
