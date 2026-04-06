@@ -38,13 +38,13 @@
   .tl-line{background:var(--border);position:relative}
   .tl-line::before{content:'';position:absolute;top:14px;left:50%;transform:translateX(-50%);width:7px;height:7px;border-radius:50%;background:var(--red);opacity:0.7}
   .tl-content h3{font-size:1.1rem;font-weight:500;color:var(--black);margin-bottom:2px}
-  .tl-content h3.muted{font-weight:400;color:var(--gray)}
+  .tl-content h3.muted{font-weight:400;color:#666}
   .tl-content h3 .tr{font-size:0.9rem;color:var(--gray);font-weight:400}
   .tl-content p{font-size:1rem;color:var(--gray);line-height:1.5;margin-top:4px}
   .tl-content a{color:var(--red);text-decoration:none;border-bottom:1px solid rgba(181,40,42,0.3)}
   .tl-content ul{font-size:1rem;color:var(--gray);line-height:1.8;margin-top:6px;padding-left:1.2rem}
   .tl-content ul ul{list-style-type:'– ';padding-left:1rem;margin-top:4px;line-height:1.7}
-  .subsection-label{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gray);opacity:0.6;margin:2rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+  .subsection-label{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:#666;margin:2rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
   .info-list{list-style:none}
   .info-list li{padding:1.25rem 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:200px 1fr;gap:1.5rem}
   .info-list li:first-child{border-top:1px solid var(--border)}
@@ -68,7 +68,7 @@
   .contact-row a{color:var(--red);text-decoration:none;border-bottom:1px solid rgba(181,40,42,0.3)}
   footer{text-align:center;padding:3rem 1.5rem;background:var(--cream);border-top:1px solid var(--border)}
   .footer-names{font-size:1.4rem;color:var(--red);margin-bottom:0.5rem}
-  footer p{font-size:12px;letter-spacing:0.2em;color:var(--gray);text-transform:uppercase}
+  footer p{font-size:12px;letter-spacing:0.2em;color:var(--gray)}
 </style>
 </head>
 <body>
@@ -109,11 +109,11 @@ const C = {
             time: "3:00 pm",
             title: "Vin d'honneur",
             title_tr: "Sektempfang · Vin d'honneur · Resepsi minuman",
-            text: "On the church square",
+            text: "In front of the church",
           },
           {
             time: "shortly before 4:00 pm",
-            title: 'Walk down to the <a href="https://www.youthhostel.ch/en/hostels/richterswil-youth-hostel" target="_blank">Jugendherberge</a>',
+            title: 'Walk down to the <a href="https://www.youthhostel.ch/en/hostels/richterswil-youth-hostel" target="_blank">Venue</a>',
             title_tr: "Zur Jugendherberge · Marche jusqu'à l'auberge · Jalan ke penginapan",
             text: "Check in, freshen up, take a swim in the lake",
           },
@@ -121,7 +121,7 @@ const C = {
             time: "4:00 pm",
             title: "Apéro",
             title_tr: "Aperitif · Apéritif · Aperitif",
-            text: 'Richterswil Horn — on the lawn in front of the Jugenherberge',
+            text: 'Richterswil Horn — on the lawn in front of the Jugendherberge',
           },
           {
             time: "7:30 pm",
@@ -162,16 +162,16 @@ const C = {
               muted: true,
               text: 'Highly recommended: enjoy a boat ride back to Zürich. Timetables at <a href="https://www.zsg.ch/en/timetables/" target="_blank">ZSG</a>.<br><br>A few ideas for the afternoon:',
               bullets: [
-                '<a href="https://www.zuerich.com/en/inform-plan/seasons-and-climate/zurich-in-summer/outdoor-pools-in-zurich" target="_blank">"Badis"</a> — Zürich\'s iconic open-air swimming spots. Our top picks:<ul style="margin-top:6px"><li><a href="https://www.zuerich.com/en/visit/nature/flussbad-oberer-letten" target="_blank">Oberletten</a> — river, lively & free</li><li><a href="https://www.zuerich.com/en/visit/nature/seebad-enge" target="_blank">Seebad Enge</a> — lake, cosy & lovely</li><li><a href="https://www.zuerich.com/en/visit/nature/strandbad-mythenquai" target="_blank">Mythenquai</a> — lake, kid-friendly</li></ul>',
+                '<a href="https://www.zuerich.com/en/inform-plan/seasons-and-climate/zurich-in-summer/outdoor-pools-in-zurich" target="_blank">"Badis"</a> — Zürich\'s iconic open-air swimming spots. Our top picks:<ul style="margin-top:6px"><li><a href="https://www.zuerich.com/en/visit/nature/flussbad-oberer-letten" target="_blank">Oberer Letten</a> — river, lively & free</li><li><a href="https://www.zuerich.com/en/visit/nature/seebad-enge" target="_blank">Seebad Enge</a> — lake, cosy & lovely</li><li><a href="https://www.zuerich.com/en/visit/nature/strandbad-mythenquai" target="_blank">Mythenquai</a> — lake, kid-friendly</li></ul>',
                 '<a href="https://www.zuerich.com/en/visit/nature/uetliberg-zurichs-very-own-mountain" target="_blank">Uetliberg</a> — For (non-serious) hikers, Zürich\'s local mountain, with panoramic views over the city and lake.'
               ],
               textAfter: '',
             },
             {
               time: "5:00 pm",
-              title: "Picnic — TBD: Küsnacht? Käferberg?",
+              title: "Picnic — TBD",
               muted: true,
-              text: "Another occasion to spend time together. We'll decide on the place closer to the date — either by the lake or up on the hill. Stay tuned.",
+              text: "Another occasion to spend time together. We'll decide on the place closer to the date — either by the lake in Küssnacht or up on the Käferberg hill in Zh. Stay tuned.",
             },
           ],
         },
@@ -187,11 +187,11 @@ const C = {
     items: [
       {
         label: "Ceremony · Zeremonie · Cérémonie · Upacara",
-        html:  'Catholic Church of Richterswil<br>Richterswil, Zürich<br><a href="https://maps.google.com/?q=Katholische+Kirche+Richterswil" target="_blank">View on map →</a>',
+        html:  'Catholic Church of Richterswil<br><a href="https://maps.google.com/?q=Katholische+Kirche+Richterswil" target="_blank">View on map →</a>',
       },
       {
         label: "Reception · Empfang · Réception · Resepsi",
-        html:  '<a href="https://www.youthhostel.ch/en/hostels/richterswil-youth-hostel" target="_blank">Jugendherberge Richterswil</a> — Richterswil Horn<br>On the shores of the Zürisee<br><a href="https://maps.google.com/?q=Jugendherberge+Richterswil" target="_blank">View on map →</a>',
+        html:  '<a href="https://www.youthhostel.ch/en/hostels/richterswil-youth-hostel" target="_blank">Jugendherberge Richterswil</a><br>Richterswil Horn, on the shores of the Zürisee<br><a href="https://maps.google.com/?q=Jugendherberge+Richterswil" target="_blank">View on map →</a>',
       },
       {
         label: "Getting there · Anreise · Accès · Transportasi",
@@ -203,13 +203,13 @@ const C = {
       },
       {
         label: "Accommodation · Unterkunft · Hébergement · Penginapan",
-        html:  `<strong>Friday night (the wedding night)</strong><br>
+        html:  `<span style="color:#666"><strong>Thursday night</strong> (if you wish to join earlier)<br>
+We have pre-reserved a few rooms at the Jugendherberge. Maxime will organise a BBQ at the lake — all welcome.</span><br><br>
+<strong>Friday night (the wedding night)</strong><br>
 We will celebrate at <a href="https://www.youthhostel.ch/en/hostels/richterswil-youth-hostel" target="_blank">Jugendherberge Richterswil</a>, which can accommodate 80 people in a mix of 4- and 2-bed rooms with shared bathrooms. We'd love to have most of you staying there with us :)<br><br>
-We also pre-reserved a few rooms at <a href="https://www.schiff-pfaeffikon.ch/en" target="_blank">Schiffhotel</a> in Pfäffikon, 10 minutes away by train (running all night).<br><br>
+We also pre-reserved a few rooms at <a href="https://www.schiff-pfaeffikon.ch/en" target="_blank">Hotel Schiff Pfäffikon</a> in Freienbach, 10 minutes away by train (running all night).<br><br>
 <strong>Saturday night</strong><br>
-For those travelling to Zürich, we pre-reserved rooms at <a href="https://www.fuerdich.ch/" target="_blank">Guesthouse Für Dich</a> in the centre of Zürich — a range of family, double and single rooms with shared or ensuite bathrooms. Please contact us for details.<br><br>
-<strong>Thursday night</strong> (if you wish to join earlier)<br>
-We have pre-reserved a few rooms at the Jugendherberge. Maxime will organise a BBQ at the lake — all welcome.`,
+For those travelling to Zürich, we pre-reserved rooms at <a href="https://www.fuerdich.ch/" target="_blank">Guesthouse Für Dich</a> in the centre of Zürich — a range of family, double and single rooms with shared or ensuite bathrooms. Please contact us for details.`,
       },
       {
         label: "RSVP",
