@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Imee & Samuel — Our Wedding</title>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+<style>
+  *{margin:0;padding:0;box-sizing:border-box}
+  :root{--red:#b5282a;--black:#111;--white:#fff;--cream:#f5f0ea;--gray:#888;--border:#ddd}
+  html{scroll-behavior:smooth}
+  body{font-family:'Cormorant Garamond',Georgia,serif;color:var(--black);background:var(--white);font-size:17px;line-height:1.7}
+  nav{position:fixed;top:0;width:100%;background:rgba(255,255,255,0.96);border-bottom:1px solid var(--border);z-index:100;display:flex;justify-content:center;gap:2rem;padding:0.85rem;flex-wrap:wrap}
+  nav a{text-decoration:none;color:var(--gray);font-size:13px;letter-spacing:0.2em;text-transform:uppercase;transition:color 0.2s}
+  nav a:hover{color:var(--red)}
+  section{padding:5rem 1.5rem}
+  .container{max-width:680px;margin:0 auto}
+  #hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--cream);padding-top:4rem}
+  .save-the-date{font-size:1.1rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:1.5rem}
+  .tr{display:block;font-size:0.72em;color:#a07070;letter-spacing:0.08em;margin-top:2px}
+  h1{font-size:clamp(3rem,10vw,6.5rem);font-weight:500;color:var(--red);letter-spacing:0.04em;line-height:1;margin-bottom:1.2rem}
+  .hero-date{font-size:clamp(0.95rem,2.5vw,1.15rem);letter-spacing:0.2em;color:var(--red);margin-bottom:2.5rem}
+  .hero-divider{display:flex;align-items:center;gap:1rem;margin:0 auto 2.5rem;width:260px}
+  .hero-divider::before,.hero-divider::after{content:'';flex:1;height:1px;background:var(--red);opacity:0.4}
+  .hero-divider-diamond{width:6px;height:6px;background:var(--red);transform:rotate(45deg);opacity:0.6;flex-shrink:0}
+  .count-num{font-size:2.5rem;font-weight:400;color:var(--red);display:block;line-height:1}
+  .count-label{font-size:11px;letter-spacing:0.2em;text-transform:uppercase;color:#a07070;margin-top:4px;display:block}
+  .section-tag{text-align:center;font-size:11px;letter-spacing:0.35em;text-transform:uppercase;color:var(--red);margin-bottom:0.75rem}
+  h2{font-size:2rem;font-weight:400;color:var(--black);margin-bottom:0.4rem;text-align:center;letter-spacing:0.03em}
+  h2 .tr{font-size:0.85rem;color:var(--gray)}
+  .section-divider{width:40px;height:1px;background:var(--red);margin:1.5rem auto 3rem;opacity:0.5}
+  #programme{background:var(--cream)}
+  .day-heading{font-size:11px;letter-spacing:0.35em;text-transform:uppercase;color:var(--red);margin:0 0 2rem;padding-bottom:0.75rem;border-bottom:1px solid var(--border)}
+  .day-section{margin-bottom:3.5rem}
+  .tl-item{display:grid;grid-template-columns:90px 1px 1fr;gap:0 1.75rem;margin-bottom:2.5rem;align-items:start}
+  .tl-time{font-size:13px;letter-spacing:0.1em;color:var(--red);text-align:right;padding-top:3px;font-style:italic}
+  .tl-line{background:var(--border);position:relative}
+  .tl-line::before{content:'';position:absolute;top:7px;left:50%;transform:translateX(-50%);width:7px;height:7px;border-radius:50%;background:var(--red);opacity:0.7}
+  .tl-content h3{font-size:1.05rem;font-weight:500;color:var(--black);margin-bottom:2px}
+  .tl-content h3.muted{font-weight:400;color:var(--gray)}
+  .tl-content h3 .tr{font-size:0.78rem;color:var(--gray);font-weight:400}
+  .tl-content p{font-size:14px;color:var(--gray);line-height:1.5;margin-top:4px}
+  .tl-content a{color:var(--red);text-decoration:none;border-bottom:1px solid rgba(181,40,42,0.3)}
+  .tl-content ul{font-size:14px;color:var(--gray);line-height:1.8;margin-top:6px;padding-left:1.2rem}
+  .subsection-label{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--gray);opacity:0.6;margin:2rem 0 1.5rem;padding-top:1.5rem;border-top:1px solid var(--border)}
+  .info-list{list-style:none}
+  .info-list li{padding:1.25rem 0;border-bottom:1px solid var(--border);display:grid;grid-template-columns:200px 1fr;gap:1.5rem}
+  .info-list li:first-child{border-top:1px solid var(--border)}
+  @media(max-width:540px){.info-list li{grid-template-columns:1fr;gap:0.25rem}}
+  @media(max-width:540px){
+    section{padding:3rem 1.2rem}
+    nav{gap:1rem;padding:0.65rem 1rem}
+    .tl-item{grid-template-columns:68px 1px 1fr;gap:0 1rem}
+    .hero-divider{width:200px}
+    h2{font-size:1.6rem}
+  }
+  .info-label{font-size:11px;letter-spacing:0.25em;text-transform:uppercase;color:var(--red);padding-top:3px}
+  .info-val{font-size:15px;color:var(--black);line-height:1.7}
+  .info-val a{color:var(--red);text-decoration:none;border-bottom:1px solid rgba(181,40,42,0.3)}
+  #contact{background:var(--cream)}
+  .contact-person{padding:1.5rem 0;border-bottom:1px solid var(--border)}
+  .contact-person:first-of-type{border-top:1px solid var(--border)}
+  .contact-name{font-size:1.3rem;font-weight:500;color:var(--black);margin-bottom:0.5rem;letter-spacing:0.05em}
+  .contact-row{display:flex;align-items:center;gap:0.6rem;font-size:15px;margin-bottom:0.3rem}
+  .contact-icon{width:14px;height:14px;flex-shrink:0;opacity:0.45}
+  .contact-row a{color:var(--red);text-decoration:none;border-bottom:1px solid rgba(181,40,42,0.3)}
+  footer{text-align:center;padding:3rem 1.5rem;background:var(--cream);border-top:1px solid var(--border)}
+  .footer-names{font-size:1.4rem;color:var(--red);margin-bottom:0.5rem}
+  footer p{font-size:12px;letter-spacing:0.2em;color:var(--gray);text-transform:uppercase}
+</style>
+</head>
+<body>
+<script>
+/* ============================================================
+   CONTENT — edit everything here
+   ============================================================ */
+const C = {
+
+  /* --- Hero --- */
+  hero: {
+    names:         "IMEE &amp; SAMUEL",
+    tagline:       "We are getting married!",
+    tagline_tr:    "Wir heiraten! · Nous nous marions ! · Kami akan menikah!",
+    date:          "18. September 2026 / Zürich Richterswil",
+  },
+
+  /* --- Nav --- */
+  nav: ["Home","Programme","Info","Contact"],
+
+  /* --- Programme section --- */
+  programme: {
+    tag:   "",
+    title: "Programme",
+    title_tr: "Ablauf · Déroulé de la journée · Jadwal Acara",
+
+    days: [
+      {
+        heading: "Friday, 18 September 2026",
+        events: [
+          {
+            time: "2:00 pm",
+            title: "Church ceremony",
+            title_tr: "Kirchliche Trauung · Cérémonie à l'église · Upacara gereja",
+            text: "Catholic church of Richterswil. Please arrive a few minutes early.",
+          },
+          {
+            time: "3:00 pm",
+            title: "Vin d'honneur",
+            title_tr: "Sektempfang · Vin d'honneur · Resepsi minuman",
+            text: "On the church square.",
+          },
+          {
+            time: "shortly before 4:00 pm",
+            title: 'Walk down to the <a href="https://www.youthhostel.ch/en/hostels/richterswil-youth-hostel" target="_blank">Jugendherberge</a>.',
+            title_tr: "Zur Jugendherberge · Marche jusqu'à l'auberge · Jalan ke penginapan",
+            text: "Check in, freshen up, take a swim in the lake.",
+          },
+          {
+            time: "4:00 pm",
+            title: "Apéro",
+            title_tr: "Aperitif · Apéritif · Aperitif",
+            text: 'Richterswil Horn — on the lawn in front of the Jugenherberge',
+          },
+          {
+            time: "7:30 pm",
+            title: "Dinner",
+            title_tr: "Abendessen · Dîner · Makan malam",
+            text: "Eat and celebrate.",
+          },
+          {
+            time: "late",
+            title: "Party",
+            title_tr: "Party · Soirée · Pesta",
+            text: "Dance floor is open — until whenever.",
+          },
+        ],
+      },
+      {
+        heading: "Saturday, 19 September",
+        events: [
+          {
+            time: "9–11 am",
+            title: "Breakfast",
+            title_tr: "Frühstück · Petit-déjeuner · Sarapan",
+            text: "For those staying at the hostel, a breakfaast will be served in the morning",
+          },
+          {
+            time: "11:00 am",
+            title: "Check-out",
+            title_tr: "Abreise · Départ · Check-out",
+            text: "Check out from the hostel: sorry for the early hour, but we are being kicked out :/. You can still chill in the park and enjoy the lake a bit longer though.",
+          },
+        ],
+        subsection: {
+          label: "For those coming from afar / who wish to join",
+          events: [
+            {
+              time: "afternoon",
+              title: "Free time — Richterswil / Zürich",
+              muted: true,
+              text: 'Highly recommended: enjoy a boat ride back to Zürich. Timetables at <a href="https://www.zsg.ch/en/timetables/" target="_blank">ZSG</a>.<br><br>A few ideas for the afternoon:',
+              bullets: [
+                '<a href="https://www.zuerich.com/en/inform-plan/seasons-and-climate/zurich-in-summer/outdoor-pools-in-zurich" target="_blank">"Badis"</a> — still open in September. Our top picks: <a href="https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/sommerbaeder/oberer-letten.html" target="_blank">Oberletten</a> (river), <a href="https://www.seebadenge.ch/wp/" target="_blank">Seebad Enge</a> (lake), <a href="https://www.stadt-zuerich.ch/de/stadtleben/sport-und-erholung/sport-und-badeanlagen/sommerbaeder/mythenquai.html" target="_blank">Mythenquai</a> (kid-friendly)',
+                '<a href="https://www.zuerich.com/en/visit/nature/uetliberg-zurichs-very-own-mountain" target="_blank">Uetliberg</a> — for the (non-serious) hikers',
+              ],
+              textAfter: '',
+            },
+            {
+              time: "5:00 pm",
+              title: "Picnic — TBD: Küsnacht? Käferberg?",
+              muted: true,
+              text: "Another occasion to spend time together. We'll decide on the place closer to the date — either by the lake or up on the hill. Stay tuned.",
+            },
+          ],
+        },
+      },
+    ],
+  },
+
+  /* --- Practical info section --- */
+  info: {
+    tag:   "Everything you need to know · Alles was ihr wissen müsst · Tout ce qu'il faut savoir · Semua yang perlu diketahui",
+    title: "Practical information",
+    title_tr: "Praktische Informationen · Informations pratiques · Informasi praktis",
+    items: [
+      {
+        label: "Ceremony · Zeremonie · Cérémonie · Upacara",
+        html:  'Catholic Church of Richterswil<br>Richterswil, Zürich<br><a href="https://maps.google.com/?q=Katholische+Kirche+Richterswil" target="_blank">View on map →</a>',
+      },
+      {
+        label: "Reception · Empfang · Réception · Resepsi",
+        html:  '<a href="https://www.youthhostel.ch/en/hostels/richterswil-youth-hostel" target="_blank">Jugendherberge Richterswil</a> — Richterswil Horn<br>On the shores of the Zürisee<br><a href="https://maps.google.com/?q=Jugendherberge+Richterswil" target="_blank">View on map →</a>',
+      },
+      {
+        label: "Getting there · Anreise · Accès · Transportasi",
+        html:  "Richterswil is ~30 min from Zürich HB by S-Bahn (S8 line). The church and hostel are both walkable from the station.<br><br>Zürich is 4 hours from Paris by train.",
+      },
+      {
+        label: "Travelling in & around Zürich",
+        html:  "Zürich's public transport is excellent — getting around is easy and stress-free. Check <a href=\"https://www.sbb.ch\" target=\"_blank\">SBB/CFF</a> and <a href=\"https://www.zvv.ch\" target=\"_blank\">ZVV</a> for tickets and timetables — multi-day passes are great value.<br><br>The lake boats are part of the same network — included in your travel pass, though zone extensions may apply (same as for the train).",
+      },
+      {
+        label: "Accommodation · Unterkunft · Hébergement · Penginapan",
+        html:  `<strong>Friday night</strong><br>
+We will celebrate at Jugendherberge Richterswil, which can accommodate 80 people in a mix of 4- and 2-bed rooms with shared bathrooms. We'd love to have most of you staying there with us :)<br><br>
+We also pre-reserved a few rooms at <a href="https://www.schiff-pfaeffikon.ch/en" target="_blank">Schiffhotel</a> in Pfäffikon, 10 minutes away by train (running all night).<br><br>
+<strong>Saturday night</strong><br>
+For those staying in Zürich, we pre-reserved rooms at <a href="https://www.fuerdich.ch/" target="_blank">Guesthouse Für Dich</a> in the centre of Zürich — a range of family, double and single rooms with shared or ensuite bathrooms. Please contact us for details.<br><br>
+<strong>Thursday night</strong> (if you wish to join earlier)<br>
+We have pre-reserved a few rooms at the Jugendherberge. Maxime will organise a BBQ at the lake — all welcome.`,
+      },
+      {
+        label: "RSVP",
+        html:  "Please let us know as soon as possible, ideally by <strong>end of May</strong>, whether you will be with us. We recommend getting in touch for accommodation options and details, food and dietary restrictions, and anything else you may need.",
+      },
+      {
+        label: "Dress code",
+        html:  "Tenue festive.",
+      },
+      {
+        label: "Gifts · Geschenke · Cadeaux · Hadiah",
+        html:  "We don't need any other gift than your presence — please just come and celebrate with us :)",
+      },
+    ],
+  },
+
+  /* --- Contact section --- */
+  contact: {
+    tag:   "Get in touch · Kontakt · Nous contacter · Hubungi kami",
+    title: "Contact",
+    title_tr: "Kontakt · Contact · Kontak",
+    people: [
+      { name: "Imee",      phone: "+41 79 799 57 77", wa: "41797995777", email: "imee.santoso@gmail.com" },
+      { name: "Samuel",    phone: "+33 6 74 14 19 88", wa: "33674141988", email: "samuel.cheptou@gmail.com" },
+      { name: "Maxime",    phone: "+33 7 67 25 01 87", wa: "33767250187", email: "maxime_c@outlook.com" },
+      { name: "Francesca", phone: "+41 79 242 89 93",  wa: "41792428993", email: "francesca.andreacchio@hotmail.com" },
+    ],
+  },
+
+  /* --- Footer --- */
+  footer: {
+    names: "Imee &amp; Samuel",
+    line:  "18 September 2026 · Zürich Richterswil",
+  },
+};
+/* ============================================================
+   END OF CONTENT
+   ============================================================ */
+
+
+/* --- Render helpers --- */
+const icon_phone = `<svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M6.6 10.8c1.4 2.8 3.8 5.1 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1-9.4 0-17-7.6-17-17 0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1L6.6 10.8z"/></svg>`;
+const icon_email = `<svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>`;
+
+function tlItem(ev) {
+  const bullets = ev.bullets ? `<ul>${ev.bullets.map(b=>`<li>${b}</li>`).join('')}</ul>` : '';
+  const after = ev.textAfter ? `<p style="margin-top:8px">${ev.textAfter}</p>` : '';
+  return `<div class="tl-item">
+    <span class="tl-time">${ev.time}</span>
+    <div class="tl-line"></div>
+    <div class="tl-content">
+      <h3${ev.muted?' class="muted"':''}>${ev.title}${ev.title_tr?`<span class="tr">${ev.title_tr}</span>`:''}</h3>
+      ${ev.text?`<p>${ev.text}</p>`:''}${bullets}${after}
+    </div>
+  </div>`;
+}
+
+function renderDay(day) {
+  const main = day.events.map(tlItem).join('');
+  let sub = '';
+  if (day.subsection) {
+    sub = `<p class="subsection-label">${day.subsection.label}</p>${day.subsection.events.map(tlItem).join('')}`;
+  }
+  return `<div class="day-section">
+    <p class="day-heading">${day.heading}</p>
+    ${main}${sub}
+  </div>`;
+}
+
+document.addEventListener('DOMContentLoaded', () => {
+  /* Nav */
+  document.querySelector('nav').innerHTML = C.nav.map((n,i)=>{
+    const hrefs = ['#hero','#programme','#infos','#contact'];
+    return `<a href="${hrefs[i]}">${n}</a>`;
+  }).join('');
+
+  /* Hero */
+  document.querySelector('h1').innerHTML = C.hero.names;
+  document.querySelector('.save-the-date').innerHTML = `${C.hero.tagline}<span class="tr">${C.hero.tagline_tr}</span>`;
+  document.querySelector('.hero-date').textContent = C.hero.date;
+
+  /* Programme */
+  const prog = document.getElementById('programme-container');
+  prog.innerHTML = `
+    <p class="section-tag">${C.programme.tag}</p>
+    <h2>${C.programme.title}<span class="tr">${C.programme.title_tr}</span></h2>
+    <div class="section-divider"></div>
+    ${C.programme.days.map(renderDay).join('')}`;
+
+  /* Info */
+  const info = document.getElementById('info-container');
+  info.innerHTML = `
+    <p class="section-tag">${C.info.tag}</p>
+    <h2>${C.info.title}<span class="tr">${C.info.title_tr}</span></h2>
+    <div class="section-divider"></div>
+    <ul class="info-list">${C.info.items.map(it=>`
+      <li><span class="info-label">${it.label}</span><span class="info-val">${it.html}</span></li>`).join('')}
+    </ul>`;
+
+  /* Contact */
+  const contact = document.getElementById('contact-container');
+  contact.innerHTML = `
+    <p class="section-tag">${C.contact.tag}</p>
+    <h2>${C.contact.title}<span class="tr">${C.contact.title_tr}</span></h2>
+    <div class="section-divider"></div>
+    ${C.contact.people.map(p=>`
+    <div class="contact-person">
+      <div class="contact-name">${p.name}</div>
+      <div class="contact-row">${icon_phone}<a href="https://wa.me/${p.wa}" target="_blank">${p.phone}</a></div>
+      <div class="contact-row">${icon_email}<a href="mailto:${p.email}">${p.email}</a></div>
+    </div>`).join('')}`;
+
+  /* Footer */
+  document.querySelector('.footer-names').innerHTML = C.footer.names;
+  document.querySelector('.footer-line').textContent = C.footer.line;
+
+
+});
+</script>
+
+<nav></nav>
+
+<section id="hero">
+  <h1></h1>
+  <p class="save-the-date"></p>
+  <p class="hero-date"></p>
+  <div class="hero-divider"><div class="hero-divider-diamond"></div></div>
+</section>
+
+<section id="programme"><div class="container" id="programme-container"></div></section>
+<section id="infos"><div class="container" id="info-container"></div></section>
+<section id="contact"><div class="container" id="contact-container"></div></section>
+
+<footer>
+  <div class="footer-names"></div>
+  <p class="footer-line"></p>
+</footer>
+
+</body>
+</html>

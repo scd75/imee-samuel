@@ -1,0 +1,12 @@
+{
+  "permissions": {
+    "allow": [
+      "WebSearch",
+      "WebFetch(domain:www.furdich.ch)",
+      "WebFetch(domain:google.com)",
+      "Bash(curl:*)",
+      "WebFetch(domain:www.zuerich.com)",
+      "WebFetch(domain:www.stadt-zuerich.ch)"
+    ]
+  }
+}
