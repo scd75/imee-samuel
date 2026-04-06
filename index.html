@@ -33,8 +33,8 @@
   #programme{background:var(--cream)}
   .day-heading{font-size:13px;letter-spacing:0.35em;text-transform:uppercase;color:var(--red);margin:0 0 2rem;padding-bottom:0.75rem;border-bottom:1px solid var(--border)}
   .day-section{margin-bottom:3.5rem}
-  .tl-item{display:grid;grid-template-columns:max-content 1px 1fr;gap:0 1.75rem;margin-bottom:2.5rem;align-items:start}
-  .tl-time{font-size:1rem;letter-spacing:0.1em;color:var(--red);text-align:right;padding-top:3px;font-style:italic;white-space:nowrap}
+  .tl-item{display:grid;grid-template-columns:150px 1px 1fr;gap:0 1.75rem;margin-bottom:2.5rem;align-items:start}
+  .tl-time{font-size:1rem;letter-spacing:0.1em;color:var(--red);text-align:right;padding-top:3px;font-style:italic}
   .tl-line{background:var(--border);position:relative}
   .tl-line::before{content:'';position:absolute;top:14px;left:50%;transform:translateX(-50%);width:7px;height:7px;border-radius:50%;background:var(--red);opacity:0.7}
   .tl-content h3{font-size:1.1rem;font-weight:500;color:var(--black);margin-bottom:2px}
@@ -52,7 +52,7 @@
   @media(max-width:540px){
     section{padding:3rem 1.2rem}
     nav{gap:1rem;padding:0.65rem 1rem}
-    .tl-item{gap:0 1rem}
+    .tl-item{grid-template-columns:100px 1px 1fr;gap:0 1rem}
     .hero-divider{width:200px}
     h2{font-size:1.6rem}
   }
