@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imee & Samuel — 18 September 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --red:   #b5282a;
+      --cream: #f5f0ea;
+      --black: #111;
+      --grey:  #888;
+      --border: #ddd;
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html, body {
+      background: #fff;
+      color: var(--black);
+      font-family: 'Cormorant Garamond', Georgia, serif;
+      font-size: 16px;
+      line-height: 1.65;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+
+    /* ── Page wrapper ── */
+    .page {
+      max-width: 680px;
+      margin: 0 auto;
+      padding: 40px 48px 40px;
+    }
+
+    /* ── Header ── */
+    .header {
+      text-align: center;
+      margin-bottom: 32px;
+    }
+
+    .header__ornament {
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--red);
+      margin: 0 auto 18px;
+    }
+
+    .header__names {
+      font-size: 3rem;
+      font-weight: 500;
+      letter-spacing: 0.04em;
+      text-transform: uppercase;
+      color: var(--red);
+      line-height: 1.1;
+    }
+
+    .header__amp {
+      font-style: normal;
+    }
+
+    .header__tagline {
+      margin-top: 14px;
+      font-size: 1.1rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--red);
+    }
+
+    .header__date {
+      margin-top: 10px;
+      font-size: 1rem;
+      letter-spacing: 0.2em;
+      color: var(--red);
+    }
+
+    .header__rule {
+      display: block;
+      width: 40px;
+      height: 1px;
+      background: var(--red);
+      margin: 18px auto 0;
+    }
+
+    /* ── Section titles ── */
+    .section {
+      margin-bottom: 28px;
+    }
+
+    .section__title {
+      font-size: 13px;
+      font-weight: 400;
+      letter-spacing: 0.35em;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 20px;
+      padding-bottom: 8px;
+      border-bottom: 1px solid var(--border);
+    }
+
+    /* ── Day heading ── */
+    .day-heading {
+      font-size: 1.05rem;
+      font-weight: 500;
+      font-style: italic;
+      color: var(--black);
+      margin-top: 18px;
+      margin-bottom: 10px;
+      letter-spacing: 0.03em;
+    }
+
+    .day-heading:first-child {
+      margin-top: 0;
+    }
+
+    /* ── Timeline ── */
+    .timeline {
+      display: table;
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    .timeline__row {
+      display: table-row;
+    }
+
+    .timeline__time {
+      display: table-cell;
+      width: 130px;
+      min-width: 130px;
+      padding: 3px 20px 3px 0;
+      font-size: 0.88rem;
+      font-weight: 500;
+      letter-spacing: 0.03em;
+      color: var(--red);
+      white-space: nowrap;
+      vertical-align: top;
+      line-height: 1.5;
+    }
+
+    .timeline__content {
+      display: table-cell;
+      padding: 3px 0 3px 20px;
+      vertical-align: top;
+      border-left: 1px solid var(--border);
+    }
+
+    .timeline__event {
+      font-size: 1rem;
+      font-weight: 500;
+      color: var(--black);
+      line-height: 1.4;
+    }
+
+    .timeline__note {
+      font-size: 0.875rem;
+      font-weight: 400;
+      color: var(--grey);
+      margin-top: 1px;
+      line-height: 1.45;
+    }
+
+    /* ── Practical info ── */
+    .info-grid {
+      display: table;
+      width: 100%;
+      border-collapse: separate;
+      border-spacing: 0 6px;
+    }
+
+    .info-row {
+      display: table-row;
+    }
+
+    .info-label {
+      display: table-cell;
+      width: 130px;
+      min-width: 130px;
+      padding-right: 20px;
+      font-size: 11px;
+      font-weight: 400;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: var(--red);
+      vertical-align: top;
+      padding-top: 2px;
+      white-space: nowrap;
+    }
+
+    .info-value {
+      display: table-cell;
+      font-size: 0.95rem;
+      font-weight: 400;
+      color: var(--black);
+      line-height: 1.55;
+    }
+
+    .info-value a {
+      color: var(--red);
+      text-decoration: underline;
+    }
+
+    /* ── Translations ── */
+    .tr {
+      display: block;
+      font-size: 0.8rem;
+      color: #a07070;
+      letter-spacing: 0.06em;
+      margin-top: 1px;
+    }
+
+    /* ── Links ── */
+    a { color: var(--red); text-decoration: underline; }
+
+    /* ── Footer ── */
+    .footer {
+      margin-top: 52px;
+      text-align: center;
+      font-size: 0.78rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--rule);
+    }
+
+    /* ── Print styles ── */
+    @media print {
+      @page {
+        size: A4;
+        margin: 18mm 20mm 18mm;
+      }
+
+      html, body {
+        background: #fff;
+        font-size: 14px;
+        line-height: 1.55;
+      }
+
+      .page {
+        max-width: 100%;
+        padding: 0;
+      }
+
+      .header {
+        margin-bottom: 36px;
+      }
+
+      .header__names {
+        font-size: 2.6rem;
+      }
+
+      .header__tagline {
+        margin-top: 10px;
+      }
+
+      .header__ornament { background: #aaa; }
+      .header__rule { background: #aaa; }
+
+      .section {
+        margin-bottom: 32px;
+      }
+
+      .section__title {
+        margin-bottom: 14px;
+        padding-bottom: 6px;
+      }
+
+      /* Translations as subtitles */
+      .tr {
+        display: block;
+        font-size: 0.82rem;
+        margin-top: 1px;
+      }
+
+      .day-heading {
+        margin-top: 20px;
+        margin-bottom: 10px;
+      }
+
+      .timeline__time {
+        padding: 4px 18px 4px 0;
+        width: 120px;
+        min-width: 120px;
+      }
+
+      .timeline__content {
+        padding: 4px 0 4px 18px;
+        border-left-color: #ccc;
+      }
+
+      .timeline__note {
+        margin-top: 1px;
+      }
+
+      .section--practical {
+        margin-top: 0;
+      }
+
+      .info-grid {
+        border-spacing: 0 8px;
+      }
+
+      .info-label {
+        width: 120px;
+        min-width: 120px;
+        padding-right: 18px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+
+    <!-- ══ HEADER ══ -->
+    <header class="header">
+      <span class="header__ornament"></span>
+      <h1 class="header__names">
+        Imee <span class="header__amp">&amp;</span> Samuel
+      </h1>
+      <p class="header__tagline">We are getting married!</p>
+      <p class="header__date">18. September 2026 &nbsp;·&nbsp; Zürich · Richterswil</p>
+      <span class="header__rule"></span>
+    </header>
+
+    <!-- ══ PROGRAMME ══ -->
+    <section class="section">
+      <h2 class="section__title">Programme <span class="tr">Ablauf · Déroulé de la journée · Jadwal Acara</span></h2>
+
+      <!-- Friday -->
+      <div class="day-block">
+        <h3 class="day-heading">Friday, 18 September 2026</h3>
+        <div class="timeline">
+
+          <div class="timeline__row">
+            <div class="timeline__time">2:15 pm</div>
+            <div class="timeline__content">
+              <div class="timeline__event">Church ceremony <span class="tr">Kirchliche Trauung · Cérémonie à l'église · Upacara gereja</span></div>
+              <div class="timeline__note"><a href="https://maps.google.com/?q=Katholische+Kirche+Richterswil" target="_blank">Catholic church of Richterswil</a>. Please arrive a few minutes early.</div>
+            </div>
+          </div>
+
+          <div class="timeline__row">
+            <div class="timeline__time">3:00 pm</div>
+            <div class="timeline__content">
+              <div class="timeline__event">Vin d'honneur <span class="tr">Sektempfang · Vin d'honneur · Resepsi minuman</span></div>
+              <div class="timeline__note">In front of the church</div>
+            </div>
+          </div>
+
+          <div class="timeline__row">
+            <div class="timeline__time">shortly before 4:00 pm</div>
+            <div class="timeline__content">
+              <div class="timeline__event">Walk down to the <a href="https://www.youthhostel.ch/en/hostels/richterswil-youth-hostel" target="_blank">Venue</a> <span class="tr">Zur Jugendherberge · Marche jusqu'à l'auberge · Jalan ke penginapan</span></div>
+              <div class="timeline__note">Check in, freshen up, take a swim in the lake</div>
+            </div>
+          </div>
+
+          <div class="timeline__row">
+            <div class="timeline__time">4:00 pm</div>
+            <div class="timeline__content">
+              <div class="timeline__event">Apéro <span class="tr">Aperitif · Apéritif · Aperitif</span></div>
+              <div class="timeline__note">Richterswil Horn — on the lawn in front of the Jugendherberge</div>
+            </div>
+          </div>
+
+          <div class="timeline__row">
+            <div class="timeline__time">7:30 pm</div>
+            <div class="timeline__content">
+              <div class="timeline__event">Dinner <span class="tr">Abendessen · Dîner · Makan malam</span></div>
+              <div class="timeline__note">Eat and celebrate</div>
+            </div>
+          </div>
+
+          <div class="timeline__row">
+            <div class="timeline__time">late</div>
+            <div class="timeline__content">
+              <div class="timeline__event">Party <span class="tr">Party · Soirée · Pesta</span></div>
+              <div class="timeline__note">Dance floor is open — until whenever</div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+
+    </section>
+
+    <!-- ══ PRACTICAL INFO ══ -->
+    <section class="section section--practical">
+      <h2 class="section__title">Practical information <span class="tr">Praktische Informationen · Informations pratiques · Informasi praktis</span></h2>
+
+      <div class="info-grid">
+
+        <div class="info-row">
+          <div class="info-label">Ceremony<br><span style="font-weight:300;letter-spacing:0.1em">Zeremonie · Cérémonie · Upacara</span></div>
+          <div class="info-value">Catholic church of Richterswil<br><a href="https://maps.google.com/?q=Katholische+Kirche+Richterswil" target="_blank">View on map →</a></div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-label">Reception<br><span style="font-weight:300;letter-spacing:0.1em">Empfang · Réception · Resepsi</span></div>
+          <div class="info-value"><a href="https://www.youthhostel.ch/en/hostels/richterswil-youth-hostel" target="_blank">Jugendherberge Richterswil</a>, Richterswil Horn — on the shores of the Zürisee<br><a href="https://maps.google.com/?q=Jugendherberge+Richterswil" target="_blank">View on map →</a></div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-label">Getting there<br><span style="font-weight:300;letter-spacing:0.1em">Anreise · Accès · Transportasi</span></div>
+          <div class="info-value">
+            Richterswil is ~30 min from Zürich HB by S-Bahn (S8 line).
+          </div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-label">Dress code</div>
+          <div class="info-value">Tenue festive</div>
+        </div>
+
+        <div class="info-row">
+          <div class="info-label">RSVP</div>
+          <div class="info-value">
+            Please let us know by <strong>end of May</strong> — <a href="https://forms.gle/6AbRaGXHnXniB9BVA" target="_blank">RSVP</a>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+  </div>
+</body>
+</html>

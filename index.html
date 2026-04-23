@@ -16,11 +16,13 @@
   nav a:hover{color:var(--red)}
   section{padding:5rem 1.5rem}
   .container{max-width:680px;margin:0 auto}
-  #hero{min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--cream);padding-top:4rem}
+  #hero{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:var(--cream);padding:8rem 1.5rem 6rem}
   .save-the-date{font-size:1.1rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin-bottom:1.5rem}
   .tr{display:block;font-size:0.85em;color:#a07070;letter-spacing:0.08em;margin-top:2px}
   h1{font-size:clamp(3rem,10vw,6.5rem);font-weight:500;color:var(--red);letter-spacing:0.04em;line-height:1;margin-bottom:1.2rem}
   .hero-date{font-size:clamp(0.95rem,2.5vw,1.15rem);letter-spacing:0.2em;color:var(--red);margin-bottom:2.5rem}
+  .hero-rsvp{display:inline-block;margin-top:1.5rem;padding:0.65rem 2.5rem;background:var(--red);color:var(--white);text-decoration:none;font-size:18px;letter-spacing:0.25em;text-transform:uppercase;transition:opacity 0.2s}
+  .hero-rsvp:hover{opacity:0.85}
   .hero-divider{display:flex;align-items:center;gap:1rem;margin:0 auto 2.5rem;width:260px}
   .hero-divider::before,.hero-divider::after{content:'';flex:1;height:1px;background:var(--red);opacity:0.4}
   .hero-divider-diamond{width:6px;height:6px;background:var(--red);transform:rotate(45deg);opacity:0.6;flex-shrink:0}
@@ -31,7 +33,7 @@
   h2 .tr{font-size:1rem;color:var(--gray)}
   .section-divider{width:40px;height:1px;background:var(--red);margin:1.5rem auto 3rem;opacity:0.5}
   #programme{background:var(--cream)}
-  .day-heading{font-size:13px;letter-spacing:0.35em;text-transform:uppercase;color:var(--red);margin:0 0 2rem;padding-bottom:0.75rem;border-bottom:1px solid var(--border)}
+  .day-heading{font-size:16px;letter-spacing:0.2em;text-transform:uppercase;color:var(--red);margin:0 0 2rem;padding-bottom:0.75rem;border-bottom:1px solid var(--border)}
   .day-section{margin-bottom:3.5rem}
   .tl-item{display:grid;grid-template-columns:150px 1px 1fr;gap:0 1.75rem;margin-bottom:2.5rem;align-items:start}
   .tl-time{font-size:1rem;letter-spacing:0.1em;color:var(--red);text-align:right;padding-top:3px;font-style:italic}
@@ -82,7 +84,7 @@ const C = {
   hero: {
     names:         "IMEE &amp; SAMUEL",
     tagline:       "We are getting married!",
-    tagline_tr:    "Wir heiraten! · Nous nous marions ! · Kami akan menikah!",
+    tagline_tr:    "",
     date:          "18. September 2026 / Zürich Richterswil",
   },
 
@@ -100,7 +102,7 @@ const C = {
         heading: "Friday, 18 September 2026",
         events: [
           {
-            time: "2:00 pm",
+            time: "2:15 pm",
             title: "Church ceremony",
             title_tr: "Kirchliche Trauung · Cérémonie à l'église · Upacara gereja",
             text: "Catholic church of Richterswil. Please arrive a few minutes early.",
@@ -144,13 +146,13 @@ const C = {
             time: "9–11 am",
             title: "Breakfast",
             title_tr: "Frühstück · Petit-déjeuner · Sarapan",
-            text: "For those staying at the hostel, a breakfaast will be served in the morning",
+            text: "For those staying at the hostel, a breakfast will be served in the morning",
           },
           {
             time: "11:00 am",
             title: "Check-out",
             title_tr: "Abreise · Départ · Check-out",
-            text: "Check out from the hostel: sorry for the early hour, but we are being kicked out :/. You can still chill in the park and enjoy the lake a bit longer though.",
+            text: "Check out from the hostel: sorry for the early hour, but we are being kicked out 😕. You can still chill in the park and enjoy the lake a bit longer though.",
           },
         ],
         subsection: {
@@ -203,17 +205,17 @@ const C = {
       },
       {
         label: "Accommodation · Unterkunft · Hébergement · Penginapan",
-        html:  `<span style="color:#666"><strong>Thursday night</strong> (would you wish to arrive earlier)<br>
+        html:  `<span style="color:#666"><strong>Thursday night</strong> (for those arriving a day early)<br>
 We have pre-reserved a few rooms at the Jugendherberge. Maxime will organise a BBQ at the lake — all welcome.</span><br><br>
-<strong>Friday night (the wedding night)</strong><br>
-We will celebrate at <a href="https://www.youthhostel.ch/en/hostels/richterswil-youth-hostel" target="_blank">Jugendherberge Richterswil</a>, which can accommodate 80 people in a mix of 4- and 2-bed rooms with shared bathrooms. We'd love to have most of you staying there with us :)<br><br>
+<strong>Friday night (the main night)</strong><br>
+We will celebrate at <a href="https://www.youthhostel.ch/en/hostels/richterswil-youth-hostel" target="_blank">Jugendherberge Richterswil</a>.<br>This hostel can host 80 people in a mix of 4- and 2-bed rooms (with shared bathrooms). We'd love to have most of you staying there with us, though it's unclear yet whether we can all fit 😬 — we will update as we get RSVP answers<br><br>
 We also pre-reserved a few rooms at <a href="https://www.schiff-pfaeffikon.ch/en" target="_blank">Hotel Schiff Pfäffikon</a> in Freienbach, 10 minutes away by train (running all night). Contact us for prices and details.<br><br>
 <strong>Saturday night</strong><br>
 For those travelling to Zürich, we pre-reserved rooms at <a href="https://www.fuerdich.ch/" target="_blank">Guesthouse Für Dich</a> in the centre of Zürich — a range of family, double and single rooms with shared or ensuite bathrooms. Contact us for prices and details.`,
       },
       {
         label: "RSVP",
-        html:  "Please let us know as soon as possible, ideally by <strong>end of May</strong>, whether you will be with us.<br><br>We also recommend getting in touch for accommodation options, planning  details, food and dietary restrictions, etc etc...",
+        html:  'Please let us know whether you will be with us — <strong>by end of May</strong>.<br><br>We also recommend getting in touch for accommodation options, planning details, food and dietary restrictions, etc etc...<br><br><a href="https://forms.gle/6AbRaGXHnXniB9BVA" target="_blank">RSVP</a>',
       },
       {
         label: "Dress code",
@@ -327,7 +329,8 @@ document.addEventListener('DOMContentLoaded', () => {
   <h1></h1>
   <p class="save-the-date"></p>
   <p class="hero-date"></p>
-  <div class="hero-divider"><div class="hero-divider-diamond"></div></div>
+  <a href="https://forms.gle/6AbRaGXHnXniB9BVA" target="_blank" class="hero-rsvp">RSVP</a>
+  <div class="hero-divider" style="margin-top:2.5rem"><div class="hero-divider-diamond"></div></div>
 </section>
 
 <section id="programme"><div class="container" id="programme-container"></div></section>
